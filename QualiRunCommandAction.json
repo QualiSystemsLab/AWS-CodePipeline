@@ -1,0 +1,46 @@
+{
+  "category": "Test",
+  "provider": "Quali-Run-Command",
+  "version": "9",
+  "settings": {
+    "entityUrlTemplate": "https://my-build-instance/job/",
+    "executionUrlTemplate": "https://my-build-instance/job/lastSuccessfulBuild/{ExternalExecutionId}/"
+  },
+  "configurationProperties": [
+    {
+      "name": "ComponentName",
+      "required": true,
+      "key": true,
+      "secret": false,
+      "queryable": false,
+      "description": "Regex matching the resource or service in the sandbox to run the command on, or SANDBOX to run a sandbox command",
+      "type": "String"
+    },
+    {
+      "name": "CommandName",
+      "required": true,
+      "key": true,
+      "secret": false,
+      "queryable": false,
+      "description": "Command to run",
+      "type": "String"
+    },
+    {
+      "name": "ArgumentsJSON",
+      "required": false,
+      "key": true,
+      "secret": false,
+      "queryable": false,
+      "description": "Named command arguments as a JSON dictionary, or blank for none",
+      "type": "String"
+    }
+  ],
+  "inputArtifactDetails": {
+    "maximumCount": 1,
+    "minimumCount": 0
+  },
+  "outputArtifactDetails": {
+    "maximumCount": 0,
+    "minimumCount": 0
+  }
+}

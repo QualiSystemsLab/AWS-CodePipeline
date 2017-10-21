@@ -1,0 +1,20 @@
+{
+  "category": "Deploy",
+  "provider": "Quali-End-Sandbox",
+  "version": "9",
+  "settings": {
+    "entityUrlTemplate": "https://my-build-instance/job/",
+    "executionUrlTemplate": "https://my-build-instance/job/lastSuccessfulBuild/{ExternalExecutionId}/"
+  },
+  "configurationProperties": [
+
+  ],
+  "inputArtifactDetails": {
+    "maximumCount": 1,
+    "minimumCount": 0
+  },
+  "outputArtifactDetails": {
+    "maximumCount": 0,
+    "minimumCount": 0
+  }
+}

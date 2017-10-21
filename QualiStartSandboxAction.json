@@ -1,0 +1,55 @@
+{
+  "category": "Deploy",
+  "provider": "Quali-Start-Sandbox",
+  "version": "9",
+  "settings": {
+    "entityUrlTemplate": "https://my-build-instance/job/{Config:BlueprintName}/",
+    "executionUrlTemplate": "https://my-build-instance/job/{Config:BlueprintName}/lastSuccessfulBuild/{ExternalExecutionId}/"
+  },
+  "configurationProperties": [
+    {
+      "name": "BlueprintName",
+      "required": true,
+      "key": true,
+      "secret": false,
+      "queryable": false,
+      "description": "Name of an existing CloudShell blueprint to use for the sandbox",
+      "type": "String"
+    },
+    {
+      "name": "InputsJSON",
+      "required": false,
+      "key": true,
+      "secret": false,
+      "queryable": false,
+      "description": "Blueprint inputs as a JSON dictionary, or blank for none",
+      "type": "String"
+    },
+    {
+      "name": "SandboxName",
+      "required": false,
+      "key": true,
+      "secret": false,
+      "queryable": false,
+      "description": "Name for the sandbox - defaults to blueprint name",
+      "type": "String"
+    },
+    {
+      "name": "DurationInMinutes",
+      "required": true,
+      "key": true,
+      "secret": false,
+      "queryable": false,
+      "description": "Duration of the sandbox in minutes",
+      "type": "Number"
+    }
+  ],
+  "inputArtifactDetails": {
+    "maximumCount": 0,
+    "minimumCount": 0
+  },
+  "outputArtifactDetails": {
+    "maximumCount": 1,
+    "minimumCount": 0
+  }
+}
