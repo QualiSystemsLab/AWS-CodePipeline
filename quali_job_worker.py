@@ -218,7 +218,7 @@ def handle_job(job, provider):
                                        data=body))
                     exid = o['executionId']
 
-                for _ in range(60):
+                for _ in range(180):
                     o = json.loads(req('get',
                                        '%s/api/v2/executions/%s' % (
                                            CLOUDSHELL_URL, exid),
