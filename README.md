@@ -119,11 +119,13 @@ The scripts and worker code expect all actions to have the same version number.
 
 ### Windows
 
-Edit `set` lines in `run_worker.cmd` with credentials and server info
+Edit `set` lines in `run_worker.cmd` with credentials and server info.
+
+Run the worker:
 
     run_worker.cmd
 
-Closing the command will shut down the worker. 
+Closing the command prompt window will shut down the worker. 
 
 ### Linux
 
